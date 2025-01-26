@@ -1,0 +1,12 @@
+{* Template to display the most read articles block *}
+<div class="pkp_block">
+    <h2>{translate key="plugins.blocks.mostReadArticles.displayName"}</h2>
+    <ul>
+        {foreach from=$mostReadArticles item=article}
+            <li>
+                <a href="{url page="article" op="view" path=$article.article_id}">{$article.title|escape}</a>
+                ({$article.total_views} views)
+            </li>
+        {/foreach}
+    </ul>
+</div>
