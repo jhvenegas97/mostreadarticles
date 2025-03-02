@@ -1,13 +1,13 @@
 {* Template to display the most read articles block *}
 <div class="pkp_block">
-    <h2 class="most-read-title">{translate key="plugins.blocks.mostReadArticles.displayName"}</h2>
+    <h3 class="most-read-title">{translate key="plugins.blocks.mostReadArticles.displayName"}</h3>
     <ul class="most-read-list">
         {foreach from=$mostReadArticles item=article}
             <li class="most-read-item">
                 <a class="most-read-link" href="{url page="article" op="view" path=$article.article_id}">
-                    <h4><span class="article-title">{$article.title|escape}</span></h4>
+                    <h6><span class="article-title">{$article.title|escape}</span></h6>
                 </a>
-                <span class="article-views">({$article.total_views} views)</span>
+                <span class="article-views">({$article.total_views} vistas)</span>
             </li>
         {/foreach}
     </ul>
@@ -30,7 +30,7 @@
     }
     .most-read-item {
         margin-bottom: 10px;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.5;
         color: #495057;
     }
